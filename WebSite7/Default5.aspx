@@ -9,7 +9,7 @@
 <body>
     <form id="form1" runat="server">
     <div>
-    <table>
+    <table border ="1">
         <tr>
             <td>
                 student id
@@ -39,25 +39,32 @@
             </td>
         </tr>
         <tr>
-            <td>
+            <td >
                 address
             </td>
             <td>
-                <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
+                <asp:TextBox ID="TextBox3" runat="server" TextMode="MultiLine" Height="100" Width="200"></asp:TextBox>
             </td>
         </tr>
         <tr>
             <td>
-                pin ocode
+                pincode
             </td>
             <td>
-                <asp:TextBox ID="TextBox4" runat="server"></asp:TextBox>
+                <asp:TextBox ID="TextBox4" runat="server" MaxLength="6"></asp:TextBox>
             </td>
         </tr>
         <tr>
             <td colspan ="2">
                 <asp:Button ID="Button1" runat="server" Text="submit" />
+                <asp:Button ID="Button3" runat="server" Text="update" />
+                <asp:Button ID="Button4" runat="server" Text="delete" />
                 <asp:Button ID="Button2" runat="server" Text="clear" />
+            </td>
+        </tr>
+        <tr>
+            <td colspan ="2">
+                <asp:GridView ID="GridView1" runat="server"></asp:GridView>
             </td>
         </tr>
     </table>
